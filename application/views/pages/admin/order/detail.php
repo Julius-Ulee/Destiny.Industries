@@ -108,6 +108,31 @@
                 }
             }
         }
+
+        statusSelect.addEventListener('change', function() {
+            const options = statusSelect.getElementsByTagName('option');
+            if (this.value === 'waiting') {
+                for (let i = 0; i < options.length; i++) {
+                    if (options[i].value !== 'waiting') {
+                        options[i].disabled = true;
+                    }
+                }
+            } else {
+                for (let i = 0; i < options.length; i++) {
+                    options[i].disabled = false;
+                }
+            }
+        });
+
+        // Disable initially if "Menunggu Pembayaran" is selected on page load
+        if (statusSelect.value === 'waiting') {
+            const options = statusSelect.getElementsByTagName('option');
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].value !== 'waiting') {
+                    options[i].disabled = true;
+                }
+            }
+        }
     </script>
 </div>
 

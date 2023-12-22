@@ -32,10 +32,10 @@
                             <form action="<?= base_url("cart/update/$row->id") ?>" method="POST">
                                 <div class="input-group">
                                     <input type="hidden" name="id" value="<?= $row->id ?>">
-                                    <input type="number" class="form-control" name="quantity" value="<?= $row->quantity ?>">
-                                    <div class="input-group-append">
+                                    <input type="number" class="form-control" name="quantity" value="<?= $row->quantity ?>" readonly>
+                                    <!-- <div class="input-group-append">
                                         <button class="btn btn-dark" type="submit" id="button-addon2"><i class="fa fa-plus"></i></button>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </form>
                         </td>
