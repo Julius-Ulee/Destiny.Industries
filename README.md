@@ -1,6 +1,6 @@
 # Destiny.Industries 👔
 
-Projek Semester 4 E-Commerce Destiny.Industries
+Projek Semester 4 - E-Commerce Destiny.Industries
 
 Setelah melakukan penelitian pada sistem informasi penjualan baju pada Destiny.Industries, maka dihasilkan sebuah aplikasi yang merupakan bentuk dari perbaikan sistem informasi yang selama ini masih dilakukan secara manual menjadi berbasis komputer. Aplikasi ini dibuat sesuai dengan kebijaksanaan dan permintaan dari pihak Tokoku untuk menangani sistem informasi penjualan baju yang diterapkannya.
 
