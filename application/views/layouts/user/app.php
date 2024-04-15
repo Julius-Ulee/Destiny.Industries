@@ -29,7 +29,10 @@
 	<!-- End Content -->
 
 	<!-- Footer -->
-	<div class="mt-5">
+	<div class="mt-5" style="width: 100%;
+    height: 50px;
+    padding-left: 0px;
+    line-height: 50px;">
 		<footer class="text-white">
 			<div class="container">
 				<div class="row py-4">
@@ -91,49 +94,49 @@
 		
 		$(document).ready(function() {
  
-		  	$("#owl-demo").owlCarousel({
+			$("#owl-demo").owlCarousel({
 		 
-		      	navigation : true, // Show next and prev buttons
-		 		loop	: true,
-		 		autoplay	: true,
-		 		autoplayTimeout : 5000,
+			navigation : true, // Show next and prev buttons
+				loop	: true,
+				autoplay	: true,
+				autoplayTimeout : 5000,
 
-		      	slideSpeed : 300,
-		      	paginationSpeed : 400,
-		 	
-		      	items : 1, 
-		      	itemsDesktop : false,
-		      	itemsDesktopSmall : false,
-		      	itemsTablet: false,
-		      	itemsMobile : false
+			slideSpeed : 300,
+			paginationSpeed : 400,
+			
+			items : 1, 
+			itemsDesktop : false,
+			itemsDesktopSmall : false,
+			itemsTablet: false,
+			itemsMobile : false
 		 
-		  	});
+			});
 		 
 		});
 	</script>
     <script>
-        $(document).ready(function(){
-            if($('select[name=province]').length > 0 && $('select[name=city]').length > 0){
-                $('select[name=province]').change(function(){
-                    $('select[name=city]').html('<option value="">Loading...</option>');
-                    var province = $(this).val();
-                    $.ajax({
-                        url: "<?= base_url('api/address/city/') ?>" + province,
-                        context: document.body,
-                        success: function(response){
-                            $('select[name=city]').html('<option value="">-- pilih kota --</option>');
-                            if(response.rajaongkir.results ?? false){
-                                var cities = response.rajaongkir.results;
-                                for(let i = 0; i < cities.length; i++){
-                                    $('select[name=city]').append('<option value="'+cities[i].city_id+'">'+cities[i].city_name+'</option>');
-                                }
-                            }
-                        }
-                    });
-                });
-                
-            }
-        });
+	$(document).ready(function(){
+	    if($('select[name=province]').length > 0 && $('select[name=city]').length > 0){
+		$('select[name=province]').change(function(){
+		    $('select[name=city]').html('<option value="">Loading...</option>');
+		    var province = $(this).val();
+		    $.ajax({
+			url: "<?= base_url('api/address/city/') ?>" + province,
+			context: document.body,
+			success: function(response){
+			    $('select[name=city]').html('<option value="">-- pilih kota --</option>');
+			    if(response.rajaongkir.results ?? false){
+				var cities = response.rajaongkir.results;
+				for(let i = 0; i < cities.length; i++){
+				    $('select[name=city]').append('<option value="'+cities[i].city_id+'">'+cities[i].city_name+'</option>');
+				}
+			    }
+			}
+		    });
+		});
+		
+	    }
+	});
     </script>
 </body>
 </html>
