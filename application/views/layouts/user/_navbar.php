@@ -17,9 +17,9 @@
                 <li class="nav-item">
                     <form action="<?= base_url('shop/search') ?>" method="POST" class="form-inline">
                         <div class="input-group input-navbar">
-                            <input type="text" name="keyword" style="border-radius: 20px;" class="form-control" size="30" placeholder="Cari Produk">
+                            <input type="text" name="keyword" class="form-control" size="30" placeholder="Cari Produk">
                             <div class="input-group-append button-navbar">
-                                <button class="btn btn-light" style="border-radius: 20px;" type="submit"><i class="fas fa-search"></i></button>
+                                <button class="btn btn-light" type="submit"><i class="fas fa-search"></i></button>
                             </div>
                         </div>
                     </form>
